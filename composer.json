@@ -9,7 +9,9 @@
       "logic",
       "boolean",
       "true",
-      "false"
+      "false",
+      "binary",
+      "ternary"
   ],
   "authors": [
     {
