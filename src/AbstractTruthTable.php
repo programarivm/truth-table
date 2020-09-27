@@ -29,14 +29,14 @@ abstract class AbstractTruthTable
 
     public function setFalse(int $i)
     {
-        $this->result[$i] = false;
+        $this->result[$i] = 0;
 
         return $this;
     }
 
     public function setTrue(int $i)
     {
-        $this->result[$i] = true;
+        $this->result[$i] = 1;
 
         return $this;
     }
