@@ -15,9 +15,9 @@ Via composer:
 
     $ composer require programarivm/truth-table
 
-### Examples
+### Binary Table
 
-Create a truth table with two input variables:
+Create a binary table with two input variables:
 
 ```php
 use TruthTable\BinaryTable;
@@ -26,7 +26,7 @@ $t = (new BinaryTable(2))->getTable();
 
 ```
 
-Get the result of the truth table:
+Get the result of the table:
 
 ```php
 use TruthTable\BinaryTable;
@@ -35,12 +35,43 @@ $r = (new BinaryTable(2))->getResult();
 
 ```
 
-Set a specific index to true and then get the result of the table:
+Set a specific index to true and get the result:
 
 ```php
 use TruthTable\BinaryTable;
 
 $r = (new BinaryTable(2))
+		->setTrue(0)
+		->getResult();
+
+```
+
+### Ternary Table
+
+Create a ternary table with two input variables:
+
+```php
+use TruthTable\TernaryTable;
+
+$t = (new TernaryTable(2))->getTable();
+
+```
+
+Get the result of the table:
+
+```php
+use TruthTable\TernaryTable;
+
+$r = (new TernaryTable(2))->getResult();
+
+```
+
+Set a specific index to true and get the result:
+
+```php
+use TruthTable\TernaryTable;
+
+$r = (new TernaryTable(2))
 		->setTrue(0)
 		->getResult();
 
