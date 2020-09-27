@@ -27,6 +27,16 @@ class TruthTable
         return $this->result;
     }
 
+    public function setFalse(int $n)
+    {
+        $this->result[$n] = false;
+    }
+
+    public function setTrue(int $n)
+    {
+        $this->result[$n] = true;
+    }
+
     protected function build()
     {
         for ($i = 0; $i < pow(2, $this->n); $i++) {
