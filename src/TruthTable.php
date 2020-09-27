@@ -8,6 +8,8 @@ class TruthTable
 
     protected $table = [];
 
+    protected $result = [];
+
     public function __construct(int $n)
     {
         $this->n = $n;
@@ -15,9 +17,14 @@ class TruthTable
         $this->build();
     }
 
-    public function get()
+    public function getTable()
     {
         return $this->table;
+    }
+
+    public function getResult()
+    {
+        return $this->result;
     }
 
     protected function build()
@@ -26,6 +33,7 @@ class TruthTable
             $bin = decbin($i);
             $padded = str_pad($bin, $this->n, '0', STR_PAD_LEFT);
             $this->table[] = str_split($padded);
+            $this->result[] = 0;
         }
 
         return $this;

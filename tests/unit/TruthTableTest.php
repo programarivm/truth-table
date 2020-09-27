@@ -10,9 +10,9 @@ class TruthTableTest extends TestCase
     /**
      * @test
      */
-    public function get_2()
+    public function get_table_2()
     {
-        $tt = (new TruthTable(2))->get();
+        $t = (new TruthTable(2))->getTable();
 
         $expected = [
             [0, 0],
@@ -21,15 +21,32 @@ class TruthTableTest extends TestCase
             [1, 1],
         ];
 
-        $this->assertEquals($expected, $tt);
+        $this->assertEquals($expected, $t);
     }
 
     /**
      * @test
      */
-    public function get_3()
+    public function get_result_2()
     {
-        $tt = (new TruthTable(3))->get();
+        $r = (new TruthTable(2))->getResult();
+
+        $expected = [
+            0,
+            0,
+            0,
+            0,
+        ];
+
+        $this->assertEquals($expected, $r);
+    }
+
+    /**
+     * @test
+     */
+    public function get_table_3()
+    {
+        $t = (new TruthTable(3))->getTable();
 
         $expected = [
             [0, 0, 0],
@@ -42,6 +59,27 @@ class TruthTableTest extends TestCase
             [1, 1, 1],
         ];
 
-        $this->assertEquals($expected, $tt);
+        $this->assertEquals($expected, $t);
+    }
+
+    /**
+     * @test
+     */
+    public function get_result_3()
+    {
+        $r = (new TruthTable(3))->getResult();
+
+        $expected = [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0,
+        ];
+
+        $this->assertEquals($expected, $r);
     }
 }
