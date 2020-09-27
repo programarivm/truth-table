@@ -27,14 +27,18 @@ class TruthTable
         return $this->result;
     }
 
-    public function setFalse(int $n)
+    public function setFalse(int $i)
     {
-        $this->result[$n] = false;
+        $this->result[$i] = false;
+
+        return $this;
     }
 
-    public function setTrue(int $n)
+    public function setTrue(int $i)
     {
-        $this->result[$n] = true;
+        $this->result[$i] = true;
+
+        return $this;
     }
 
     protected function build()

@@ -29,6 +29,19 @@ class TruthTableTest extends TestCase
         $this->assertEquals($expected, $r);
     }
 
+    /**
+     * @dataProvider setTrueData
+     * @test
+     */
+    public function set_true($n, $i, $expected)
+    {
+        $r = (new TruthTable($n))
+                ->setTrue($i)
+                ->getResult();
+
+        $this->assertEquals($expected, $r);
+    }
+
     public function getTableData()
     {
         return [
@@ -70,6 +83,26 @@ class TruthTableTest extends TestCase
                     0,
                     0,
                     0,
+                    0,
+                    0,
+                ],
+            ],
+        ];
+    }
+
+    public function setTrueData()
+    {
+        return [
+            [
+                2, 0, [
+                    1,
+                    0,
+                    0,
+                    0,
+                ],
+                2, 1, [
+                    0,
+                    1,
                     0,
                     0,
                 ],
