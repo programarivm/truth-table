@@ -11,6 +11,8 @@ class TruthTable
     public function __construct(int $n)
     {
         $this->n = $n;
+
+        $this->build();
     }
 
     public function get()
@@ -20,7 +22,11 @@ class TruthTable
 
     protected function build()
     {
-        // TODO
+        for ($i = 0; $i < pow(2, $this->n); $i++) {
+            $bin = decbin($i);
+            $padded = str_pad($bin, $this->n, '0', STR_PAD_LEFT);
+            $this->table[] = str_split($padded);
+        }
 
         return $this;
     }
