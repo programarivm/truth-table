@@ -1,6 +1,5 @@
 ## Truth Table
 
-[![Latest Stable Version](https://poser.pugx.org/programarivm/truth-table/v/stable)](https://packagist.org/packages/programarivm/truth-table)
 [![Build Status](https://travis-ci.org/programarivm/truth-table.svg?branch=master)](https://travis-ci.org/programarivm/truth-table)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
