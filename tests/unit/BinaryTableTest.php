@@ -3,9 +3,9 @@
 namespace TruthTable\Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
-use TruthTable\TruthTable;
+use TruthTable\BinaryTable;
 
-class TruthTableTest extends TestCase
+class BinaryTableTest extends TestCase
 {
     /**
      * @dataProvider getTableData
@@ -13,7 +13,7 @@ class TruthTableTest extends TestCase
      */
     public function get_table($n, $expected)
     {
-        $t = (new TruthTable($n))->getTable();
+        $t = (new BinaryTable($n))->getTable();
 
         $this->assertEquals($expected, $t);
     }
@@ -24,7 +24,7 @@ class TruthTableTest extends TestCase
      */
     public function get_result($n, $expected)
     {
-        $r = (new TruthTable($n))->getResult();
+        $r = (new BinaryTable($n))->getResult();
 
         $this->assertEquals($expected, $r);
     }
@@ -35,7 +35,7 @@ class TruthTableTest extends TestCase
      */
     public function set_true($n, $i, $expected)
     {
-        $r = (new TruthTable($n))
+        $r = (new BinaryTable($n))
                 ->setTrue($i)
                 ->getResult();
 
