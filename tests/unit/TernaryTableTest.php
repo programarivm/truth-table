@@ -18,6 +18,17 @@ class TernaryTableTest extends TestCase
         $this->assertEquals($expected, $t);
     }
 
+    /**
+     * @dataProvider getResultData
+     * @test
+     */
+    public function get_result($n, $expected)
+    {
+        $r = (new TernaryTable($n))->getResult();
+
+        $this->assertEquals($expected, $r);
+    }
+
     public function getTableData()
     {
         return [
@@ -61,6 +72,54 @@ class TernaryTableTest extends TestCase
                     [2, 2, 0],
                     [2, 2, 1],
                     [2, 2, 2],
+                ],
+            ],
+        ];
+    }
+
+    public function getResultData()
+    {
+        return [
+            [
+                2, [
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                ],
+                3, [
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
                 ],
             ],
         ];
