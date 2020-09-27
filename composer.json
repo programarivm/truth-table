@@ -1,6 +1,6 @@
 {
   "name": "programarivm/truth-table",
-  "description": "Data structure to manage a logical truth table.",
+  "description": "Data structure representing a logical truth table.",
   "type": "library",
   "license": "GPL-3.0-only",
   "keywords": [
