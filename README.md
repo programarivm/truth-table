@@ -20,27 +20,27 @@ Via composer:
 Create a truth table with two input variables:
 
 ```php
-use TruthTable\TruthTable;
+use TruthTable\BinaryTable;
 
-$t = (new TruthTable(2))->getTable();
+$t = (new BinaryTable(2))->getTable();
 
 ```
 
 Get the result of the truth table:
 
 ```php
-use TruthTable\TruthTable;
+use TruthTable\BinaryTable;
 
-$r = (new TruthTable(2))->getResult();
+$r = (new BinaryTable(2))->getResult();
 
 ```
 
 Set a specific index to true and then get the result of the table:
 
 ```php
-use TruthTable\TruthTable;
+use TruthTable\BinaryTable;
 
-$r = (new TruthTable(2))
+$r = (new BinaryTable(2))
 		->setTrue(0)
 		->getResult();
 
