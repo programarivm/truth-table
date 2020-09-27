@@ -29,6 +29,19 @@ class TernaryTableTest extends TestCase
         $this->assertEquals($expected, $r);
     }
 
+    /**
+     * @dataProvider setUnknownData
+     * @test
+     */
+    public function set_unknown($n, $i, $expected)
+    {
+        $r = (new TernaryTable($n))
+                ->setUnknown($i)
+                ->getResult();
+
+        $this->assertEquals($expected, $r);
+    }
+
     public function getTableData()
     {
         return [
@@ -111,6 +124,25 @@ class TernaryTableTest extends TestCase
                     2,
                     2,
                     2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                ],
+            ],
+        ];
+    }
+
+    public function setUnknownData()
+    {
+        return [
+            [
+                2, 0, [
                     2,
                     2,
                     2,

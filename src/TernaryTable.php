@@ -4,6 +4,13 @@ namespace TruthTable;
 
 class TernaryTable extends AbstractTruthTable
 {
+    public function setUnknown(int $i)
+    {
+        $this->result[$i] = 2;
+
+        return $this;
+    }
+
     protected function build()
     {
         for ($i = 0; $i < pow(3, $this->n); $i++) {
