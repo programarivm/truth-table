@@ -46,6 +46,17 @@ $r = (new BinaryTable(2))
 
 ```
 
+Set a specific index to false and get the result:
+
+```php
+use TruthTable\BinaryTable;
+
+$r = (new BinaryTable(2))
+		->setFalse(0)
+		->getResult();
+
+```
+
 ### Ternary Table
 
 Create a ternary table with two input variables:
@@ -73,6 +84,28 @@ use TruthTable\TernaryTable;
 
 $r = (new TernaryTable(2))
 		->setTrue(0)
+		->getResult();
+
+```
+
+Set a specific index to false and get the result:
+
+```php
+use TruthTable\TernaryTable;
+
+$r = (new TernaryTable(2))
+		->setFalse(0)
+		->getResult();
+
+```
+
+Set a specific index to unknown and get the result:
+
+```php
+use TruthTable\TernaryTable;
+
+$r = (new TernaryTable(2))
+		->setUnknown(0)
 		->getResult();
 
 ```
