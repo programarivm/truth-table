@@ -27,16 +27,20 @@ abstract class AbstractTruthTable
         return $this->result;
     }
 
-    public function setFalse(int $i)
+    public function setFalse(array $indexes)
     {
-        $this->result[$i] = 0;
+        foreach ($indexes as $i) {
+            $this->result[$i] = 0;
+        }
 
         return $this;
     }
 
-    public function setTrue(int $i)
+    public function setTrue(array $indexes)
     {
-        $this->result[$i] = 1;
+        foreach ($indexes as $i) {
+            $this->result[$i] = 1;
+        }
 
         return $this;
     }

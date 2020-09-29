@@ -35,24 +35,28 @@ $r = (new BinaryTable(2))->getResult();
 
 ```
 
-Set a specific index to true and get the result:
+Set specific indexes to `true` and get the result:
 
 ```php
 use TruthTable\BinaryTable;
 
+$true = [0, 1];
+
 $r = (new BinaryTable(2))
-		->setTrue(0)
+		->setTrue($true)
 		->getResult();
 
 ```
 
-Set a specific index to false and get the result:
+Set specific indexes to `false` and get the result:
 
 ```php
 use TruthTable\BinaryTable;
 
+$false = [0, 1];
+
 $r = (new BinaryTable(2))
-		->setFalse(0)
+		->setFalse($false)
 		->getResult();
 
 ```
@@ -77,35 +81,41 @@ $r = (new TernaryTable(2))->getResult();
 
 ```
 
-Set a specific index to true and get the result:
+Set specific indexes to `true` and get the result:
 
 ```php
 use TruthTable\TernaryTable;
 
+$true = [0, 1];
+
 $r = (new TernaryTable(2))
-		->setTrue(0)
+		->setTrue($true)
 		->getResult();
 
 ```
 
-Set a specific index to false and get the result:
+Set specific indexes to `false` and get the result:
 
 ```php
 use TruthTable\TernaryTable;
 
+$false = [0, 1];
+
 $r = (new TernaryTable(2))
-		->setFalse(0)
+		->setFalse($false)
 		->getResult();
 
 ```
 
-Set a specific index to unknown and get the result:
+Set specific indexes to unknown and get the result:
 
 ```php
 use TruthTable\TernaryTable;
 
+$unknown = [0, 1];
+
 $r = (new TernaryTable(2))
-		->setUnknown(0)
+		->setUnknown($unknown)
 		->getResult();
 
 ```

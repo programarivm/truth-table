@@ -30,6 +30,19 @@ class TernaryTableTest extends TestCase
     }
 
     /**
+     * @dataProvider setTrueData
+     * @test
+     */
+    public function set_true($n, $i, $expected)
+    {
+        $r = (new TernaryTable($n))
+                ->setTrue($i)
+                ->getResult();
+
+        $this->assertEquals($expected, $r);
+    }
+
+    /**
      * @dataProvider setUnknownData
      * @test
      */
@@ -138,11 +151,30 @@ class TernaryTableTest extends TestCase
         ];
     }
 
+    public function setTrueData()
+    {
+        return [
+            [
+                2, [0, 1, 2], [
+                    1,
+                    1,
+                    1,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                    2,
+                ],
+            ],
+        ];
+    }
+
     public function setUnknownData()
     {
         return [
             [
-                2, 0, [
+                2, [0], [
                     2,
                     2,
                     2,
